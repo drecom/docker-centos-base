@@ -2,7 +2,7 @@
 #
 # VERSION               0.0.1
 
-FROM     centos:latest
+FROM     centos:centos6.7
 
 MAINTAINER Drecom Technical Development Department "pr_itn@drecom.co.jp"
 
