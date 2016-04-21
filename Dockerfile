@@ -20,5 +20,6 @@ RUN yum install -y \
     nodejs \
 &&  yum clean all
 
-RUN cp -p /usr/share/zoneinfo/Japan /etc/localtime
+RUN \cp -p /usr/share/zoneinfo/Japan /etc/localtime \
+&&  echo 'ZONE="Asia/Tokyo"' > /etc/sysconfig/clock
 
