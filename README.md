@@ -27,6 +27,12 @@ It's on [docker-hub](https://hub.docker.com/r/drecom/centos-base/) and [github](
  * 5
  * centos5
 
+## how to build
+
+```sh
+docker build --rm -t centos-build .
+```
+
 ## running
 
 ```sh
