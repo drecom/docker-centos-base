@@ -4,7 +4,7 @@
 
 FROM     centos:latest
 
-MAINTAINER Gen Takahashi "gen.takahashi@drecom.co.jp"
+MAINTAINER Drecom Technical Development Department "pr_itn@drecom.co.jp"
 
 #RUN rpm -ivh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
