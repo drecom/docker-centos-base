@@ -50,6 +50,9 @@ RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${PHANTOMJS_V
 &&  rm -rf phantomjs-${PHANTOMJS_VERSION}-linux-x86_64 \
 &&  rm     phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2
 
+# defaultのlocaleをja_JP.UTF-8にする
+ENV LANG=ja_JP.UTF-8
+
 RUN \cp -p /usr/share/zoneinfo/Japan /etc/localtime \
 &&  echo 'ZONE="Asia/Tokyo"' > /etc/sysconfig/clock
 
