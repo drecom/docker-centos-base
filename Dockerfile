@@ -35,6 +35,10 @@ RUN yum install -y \
     npm \
 &&  yum clean all
 
+# pip install
+RUN wget https://bootstrap.pypa.io/get-pip.py \
+&&  python get-pip.py
+
 RUN \cp -p /usr/share/zoneinfo/Japan /etc/localtime \
 &&  echo 'ZONE="Asia/Tokyo"' > /etc/sysconfig/clock
 
