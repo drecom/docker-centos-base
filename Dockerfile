@@ -9,6 +9,10 @@ MAINTAINER Drecom Technical Development Department "pr_itn@drecom.co.jp"
 #RUN rpm -ivh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 RUN yum install -y \
+    epel-release \
+    openssl-devel \
+    readline-devel\
+    zlib-devel \
     wget \
     curl \
     git \
@@ -17,7 +21,18 @@ RUN yum install -y \
     hash-slinger \
     bzip2 \
     tar \
+    ImageMagick \
+    ImageMagick-devel \
+    libffi-devel \
+    mysql \
+    mysql-devel \
+    libxslt-devel \
+    redis \
+    python \
+&&  yum groupinstall "Development Tools" -y \
+&&  yum install -y --enablerepo=epel \
     nodejs \
+    npm \
 &&  yum clean all
 
 RUN \cp -p /usr/share/zoneinfo/Japan /etc/localtime \
