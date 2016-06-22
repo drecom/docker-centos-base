@@ -3,7 +3,7 @@
 
 A CentOS docker container
 
-It's on [docker-hub](https://hub.docker.com/r/drecom/centos-base/) and [github](https://github.com/gendre/docker-centos-base/)
+It's on [docker-hub](https://hub.docker.com/r/drecom/centos-base/) and [github](https://github.com/drecom/docker-centos-base/)
 
 ## tags and links
 * `latest` [(master/Dockerfile)](https://github.com/drecom/docker-centos-base/blob/master/Dockerfile)
