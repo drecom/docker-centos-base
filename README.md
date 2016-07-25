@@ -1,5 +1,5 @@
 # docker-centos-base
-
+[![CircleCI](https://circleci.com/gh/drecom/docker-centos-base/tree/master.svg?style=svg)](https://circleci.com/gh/drecom/docker-centos-base/tree/master)
 
 A CentOS docker container
 
