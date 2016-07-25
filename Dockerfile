@@ -55,4 +55,3 @@ ENV LANG=ja_JP.UTF-8
 
 RUN \cp -p /usr/share/zoneinfo/Japan /etc/localtime \
 &&  echo 'ZONE="Asia/Tokyo"' > /etc/sysconfig/clock
-
