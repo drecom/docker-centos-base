@@ -1,0 +1,17 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+
+test:
+  override:
+    - docker build --rm -t centos-base .
+
+general:
+  branches:
+    ignore:
+      - /^[0-9.]+$/
+      - /^centos[0-9.]+$/
