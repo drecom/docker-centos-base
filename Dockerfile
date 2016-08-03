@@ -52,6 +52,7 @@ RUN wget -U "wget" --wait=5 https://github.com/paladox/phantomjs/releases/downlo
 
 # defaultのlocaleをja_JP.UTF-8にする
 ENV LANG=ja_JP.UTF-8
+RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 
 RUN \cp -p /usr/share/zoneinfo/Japan /etc/localtime \
 &&  echo 'ZONE="Asia/Tokyo"' > /etc/sysconfig/clock
