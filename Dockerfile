@@ -30,10 +30,11 @@ RUN yum install -y \
     redis \
     python \
 &&  yum groupinstall "Development Tools" -y \
-&&  yum install -y --enablerepo=epel \
-    nodejs \
-    npm \
 &&  yum clean all
+
+# node.js LTS install
+RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/6/x86_64/nodejs-4.5.0-1nodesource.el6.x86_64.rpm \
+    && npm -g up
 
 # pip install
 RUN wget https://bootstrap.pypa.io/get-pip.py \
