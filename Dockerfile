@@ -33,7 +33,8 @@ RUN yum install -y \
 &&  yum clean all
 
 # node.js LTS install
-RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/6/x86_64/nodejs-4.5.0-1nodesource.el6.x86_64.rpm \
+RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - \
+    && yum -y install nodejs \
     && npm -g up
 
 # pip install
