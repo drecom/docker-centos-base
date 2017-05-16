@@ -46,7 +46,7 @@ RUN pip install s3cmd
 
 # phantomjs install
 ENV PHANTOMJS_VERSION 2.1.1
-RUN wget -U "wget" --wait=5 https://github.com/paladox/phantomjs/releases/download/2.1.7/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 \
+RUN wget -U "wget" --wait=5 https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 \
 &&  tar xf phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 \
 &&  mv     phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/bin/phantomjs /usr/bin/phantomjs \
 &&  rm -rf phantomjs-${PHANTOMJS_VERSION}-linux-x86_64 \
