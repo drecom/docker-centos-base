@@ -37,6 +37,9 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - \
     && yum -y install nodejs \
     && npm -g up
 
+# yarn install
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+
 # pip install
 RUN wget https://bootstrap.pypa.io/get-pip.py \
 &&  python get-pip.py
