@@ -49,13 +49,19 @@ RUN pip install s3cmd
 
 # phantomjs install
 ENV PHANTOMJS_VERSION 2.1.1
-RUN wget -U "wget" --wait=5 https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 \
+RUN wget -U "wget" --wait=5 https://github.com/Medium/phantomjs/releases/download/v${PHANTOMJS_VERSION}/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 \
 &&  tar xf phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 \
 &&  mv     phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/bin/phantomjs /usr/bin/phantomjs \
 &&  rm -rf phantomjs-${PHANTOMJS_VERSION}-linux-x86_64 \
 &&  rm     phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2
 
-# defaultのlocaleをja_JP.UTF-8にする
+# dockerize install
+ENV DOCKERIZE_VERSION v0.6.0
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+&&  tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+&&  rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
+# Change default locale to ja-JP.UTF-8
 ENV LANG=ja_JP.UTF-8
 RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 
