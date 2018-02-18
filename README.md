@@ -1,4 +1,5 @@
 # docker-centos-base
+[![Docker Hub Status](https://dockerbuildbadges.quelltext.eu/status.svg?organization=drecom&repository=centos-base)](https://hub.docker.com/r/drecom/centos-base/)
 [![CircleCI](https://circleci.com/gh/drecom/docker-centos-base/tree/master.svg?style=svg)](https://circleci.com/gh/drecom/docker-centos-base/tree/master)
 
 A CentOS docker container
