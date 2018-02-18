@@ -61,7 +61,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 &&  tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
 &&  rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-# defaultのlocaleをja_JP.UTF-8にする
+# Change default locale to ja-JP.UTF-8
 ENV LANG=ja_JP.UTF-8
 RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 
