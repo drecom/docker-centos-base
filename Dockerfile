@@ -55,6 +55,12 @@ RUN wget -U "wget" --wait=5 https://github.com/Medium/phantomjs/releases/downloa
 &&  rm -rf phantomjs-${PHANTOMJS_VERSION}-linux-x86_64 \
 &&  rm     phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2
 
+# dockerize install
+ENV DOCKERIZE_VERSION v0.6.0
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+&&  tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+&&  rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
 # defaultのlocaleをja_JP.UTF-8にする
 ENV LANG=ja_JP.UTF-8
 RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
