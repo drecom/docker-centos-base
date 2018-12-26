@@ -1,11 +1,5 @@
-# CentOS
-#
-# VERSION               0.0.1
-
 FROM  centos:7.3.1611
 LABEL maintainer "Drecom Technical Development Department <pr_itn@drecom.co.jp>"
-
-#RUN rpm -ivh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 RUN yum install -y \
     epel-release \
