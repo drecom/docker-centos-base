@@ -17,8 +17,8 @@ RUN yum install -y \
     ImageMagick \
     ImageMagick-devel \
     libffi-devel \
-    mysql \
-    mysql-devel \
+    mariadb \
+    mariadb-devel \
     libxslt-devel \
     redis \
     python \
